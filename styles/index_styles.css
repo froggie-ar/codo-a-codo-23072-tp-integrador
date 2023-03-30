@@ -1,0 +1,354 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@400;500;700&display=swap');
+
+/* ------------- reset default del browser ------------- */
+
+* {
+    font-family: "Raleway";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ 
+  El criterio de desarrollo es mobile first 
+ 
+ */
+
+/* ------------- nav-bar ------------- */
+
+.nav-bar {
+    width: 100%;
+    background-color: #30343F;
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* 
+ Para centrar la imagen en el nav-bar un metodo es envolver la imagen en un 
+ div, setear display en flex y luego setear la propiedad justify-content en 
+ center. Repetimos la técnica para centrar la lista del menu
+*/
+
+#nav-bar-image-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list {
+    margin-bottom: 1rem;
+}
+.menu-list li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+#nav-menu-list-img-li {
+    margin-right: 0;
+}
+
+#cart {
+    width: 2rem;
+    height: 1rem;
+}
+
+/* ------------- new arrivals section ------------- */
+
+/*
+ Para poner el fondo en background y blurearlo sin afectar al texto hay que:
+
+ 1. crear un contenedor para la imagen y el texto a superponer. Al contenedor 
+    hay que darle position: relative porque al fondo le vamos a poner position: 
+    absolute. IMPORTANTE: la regla de position: absolute dice que si el contenedor
+    padre no tiene definida el position entonces va a tomar como referencia al navegador 
+    y eso no nos sirve.
+  
+  2. al elemento hijo que contiene la imagen del fondo le vamos a definir position: absolute
+     para aprovechar la propiedad de este posicionamiento que saca al elemento
+    del flujo normal y entonces considera como primer elemento al que le sigue 
+    (texto) logrando asi superponer a ambos elementos.
+  
+  3. Al elemento contenedor padre (1) le damos el tamaño que necesitamos y le asignamos
+     la propiedad overflow: hidden por si la imagen de (2) es más grande de lo que necesitamos
+  
+  4. Al contenedor de (2) le definimos el background-image y el blur que deseamos, 
+     tambien le damos el tamaño a la caja que va a mostrar la imagen, el blur y
+     el z-index: -1 para mandarlo al fondo
+
+ */
+
+#new-arrivals {
+    position: relative;
+    height: 18.8rem;    
+    color: white;
+    overflow: hidden;
+}
+
+#new-arrivals-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/funkos-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    z-index: -1;
+}
+
+#new-arrivals-contents {
+    width: 70%;
+    margin: 5em auto;
+}
+
+#new-arrivals-contents > h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+#new-arrivals-contents > span {
+    font-weight: 400;
+    font-size: 1.13rem;
+}
+
+#shop-button {
+    width: 13.2rem;
+    height: 3rem;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 0.8rem;
+}
+
+/* ------------- hero section ------------- */
+
+.article-right, .article-left {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.hero-article-image {
+    flex: 1;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.hero-article-text-content-r, .hero-article-text-content-l {
+    flex: 3;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-text-content-title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.hero-text-content-desc {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.hero-article-text-divider {
+    width: 100%;
+    height: 3px;
+    background-color: #FF3333;
+    border: none;
+    margin: 1.5em 0;
+}
+
+.view-collection-button {
+    width: 17rem;
+    height: 4rem;
+    background-color: #30343F;
+    color: white;
+    border-radius: 50px;
+    padding-top: 1rem;
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1.5rem;    
+}
+
+.hero-article-divider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin: 1.5em 0;
+}
+
+/* ------------- recent-launches ------------- */
+
+.recent-launches > h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-left: 4rem;
+}
+
+
+/* ------------- footer ------------- */
+
+.footer-bar {
+    display: flex;
+    background-color: #30343F;
+    color: white;
+    flex-direction: column;
+}
+
+#footer-upper-box {
+    width: 100%;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+#footer-lower-box {
+    width: 100%;
+    flex: 1;
+}
+
+#footer-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-image {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu-list {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-menu-list li {
+    display: inline-block;
+}
+
+#footer-lower-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+
+/* -------------------------------- pantallas grandes -------------------------------- */
+
+@media only screen and (min-width: 1000px) {
+
+/* ------------- nav-bar ------------- */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 7.0rem;
+}
+
+#nav-bar-image-box {
+    flex: 1;
+    padding-top: 1rem;
+}
+
+#nav-menu {
+    flex: 1;
+    padding-top: 3rem;
+}
+
+#logo-light-horizontal {
+    height: 3.5rem;
+    margin-top: 1rem;
+}
+
+/* ------------- hero section ------------- */
+
+.hero-article-divider {
+    display: none;
+}
+
+.article-right {
+    flex-direction: row-reverse;
+}
+
+.article-left {
+    flex-direction: row;
+}
+
+.hero-article-text-content-r {
+    margin-top: 10rem;
+    margin-left: 4rem;
+    height: 15rem;
+}
+
+.hero-article-text-content-l {
+    margin-top: 10rem;
+    margin-right: 4rem;
+    height: 15rem;
+}
+
+.hero-article-image {
+    margin-right: 4rem;
+}
+
+.hero-text-content-title {
+    width: 90%;
+}
+
+.hero-text-content-desc {
+    width: 70%;
+}
+
+/* ------------- footer ------------- */
+
+#footer-upper-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-menu {
+    display: block;
+}
+
+.footer-menu-list {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+/* Restauramos la lista a su forma vertical */
+
+.footer-menu-list li {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#footer-image {
+    margin-top: 4rem;
+    margin-right: 6rem;
+}
+
+}
+/* -------------------------------- pantallas muy grandes -------------------------------- */
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+      width: 1150px;
+      /* esta es una forma rapida de centrar todo el conenido */
+      margin: 0 auto;
+    }
+}
