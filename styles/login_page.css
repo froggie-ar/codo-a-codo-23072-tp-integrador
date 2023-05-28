@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@400;500;700&display=swap');
+
+.login__form {
+    display: grid;
+    grid-template-columns: 13% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "ga_prompt_1 ga_input_1"
+        "ga_prompt_2 ga_input_2"
+        "ga_button ga_checkbox"
+        "ga_link ga_link";
+    justify-items: start;
+    justify-content: center;
+    align-items: baseline;
+    row-gap: var(--spacing-20);
+}
+
+.email_prompt {
+    grid-area: ga_prompt_1;
+}
+
+.email_input {
+    grid-area: ga_input_1;
+    justify-self: stretch;
+}
+
+.password_prompt {
+    grid-area: ga_prompt_2;
+}
+
+.password_input {
+    grid-area: ga_input_2;
+    justify-self: stretch;
+}
+
+.register_button {
+    grid-area: ga_button;
+    justify-self: end;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-family: var(--base-font);
+    font-weight: 400;
+    font-size: var(--font-xsmall);
+    padding: var(--spacing-12) var(--spacing-28);
+    transition: all 0.3s ease-in-out;
+}
+
+.register_button:hover {
+    background-color: var(--dark-solid);
+}
+
+
+.remember_checkbox {
+    grid-area: ga_checkbox;
+    justify-self: start;
+    margin-left: var(--spacing-36);
+    font-size: var(--font-medium);
+    font-weight: 400;
+}
+
+.forgot_link {
+    grid-area: ga_link;
+    justify-self: center;
+    font-size: var(--font-small);
+    font-weight: 400;
+    color: var(--secondary-solid);
+    margin-bottom: var(--spacing-36);
+}
+
+

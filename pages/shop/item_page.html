@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funkshop e-commerce site">
+    <meta name="keywords" content="shop, action figures, collectibles, collections, movies">
+    <link rel="stylesheet" href="./../../styles/00_normalizer.css" class="css">
+    <link rel="stylesheet" href="./../../styles/01_header_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/02_footer_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/item_page.css" class="css">
+    <link rel="stylesheet" href="./../../styles/04_slider_common.css">
+    <title>FunkItem</title>
+</head>
+<body>
+    <div froggie-include-html="../snippets/header_snippet.html"></div>
+
+    <section class="item_area container">
+
+        <img class="item__image" src="../../images/baby-yoda-1.jpg" alt="imagen del item">
+
+        <div class="item__info">
+            
+            <p class="item__up_title">STAR WARS</p>
+            <p class="item__title">BABY YODA BLUE BALL</p>
+            <p class="item__text">Figura coleccionable de Baby Yoda (Grocu) - The Mandalorian Saga, edición limitada.</p>
+            <p class="item__price">$1799,99.-</p> 
+
+            <form class="add_to_cart_form" action="">
+
+                <div class="form__counter_block">
+                    
+                    <input class="form__value_button" type="button" id="decrease-button" value="-" />
+                    <input class="form__item_number"  type="number" id="qty-number" value="0" />
+                    <input class="form__value_button" type="button" id="increase-button" value="+" />
+
+                </div>
+
+                <input type="submit" class="form__go_cart_button" value="Agregar al Carrito">  
+                
+            </form>
+            
+            <p class="item__metodos_pago" ><a class="item__link" href="">Ver métodos de pago</a> - 3 CUOTAS SIN INTERES</p>  
+
+        </div>
+
+    </section>
+    
+    <section id="related-items">
+        <h2>PRODUCTOS RELACIONADOS</h2>
+        <ul class="slider__items">
+            <li class="slider__item">
+                <article class="card-item">
+                    <a class="card-item__link" href="">
+                        <picture class="card-item__cover">
+                            <span class="card-item__tag">Nuevo</span>
+                            <img class="card-item__img--front" src="./../../images/trooper-1.jpg" alt="Figura coleccionable Funko de un Stormtrooper">
+                            <img class="card-item__img--back" src="./../../images/trooper-box.jpg" alt="Figura Coleccionable Funko de un Stormtrooper en caja">
+                        </picture>
+                        <div class="card-item__content">
+                            <p class="card-item__licence">STARWARS</p>
+                            <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                            <p class="card-item__price">$ 1799,99.-</p>
+                            <p class="card-item__promo">3 CUOTAS SIN INTERES</p>
+                        </div>
+                    </a> 
+                </article>
+            </li>
+            <li class="slider__item">
+                <article class="card-item">
+                    <a class="card-item__link" href="">
+                        <picture class="card-item__cover">
+                            <span class="card-item__tag">Nuevo</span>
+                            <img class="card-item__img--front" src="./../../images/pidgeotto-1.jpg" alt="Figura coleccionable Funko de un Pidgeotto en caja">
+                            <img class="card-item__img--back" src="./../../images/pidgeotto-box.jpg" alt="Figura coleccionable Funko de un Pidgeotto">
+                        </picture>
+                        <div class="card-item__content">
+                            <p class="card-item__licence">POKEMON</p>
+                            <h4 class="card-item__name">PIDGEOTTO</h4>
+                            <p class="card-item__price">$ 1799,99.-</p>
+                            <p class="card-item__promo">3 CUOTAS SIN INTERES</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li class="slider__item">
+                <article class="card-item">
+                    <a class="card-item__link" href="">
+                        <picture class="card-item__cover">
+                            <span class="card-item__tag">Nuevo</span>
+                            <img class="card-item__img--front" src="./../../images/luna-1.jpg" alt="Figura coleccionable Funko de Luna Lovegood">
+                            <img class="card-item__img--back" src="./../../images/luna-box.jpg" alt="Figura coleccionable Funko de Luna Lovegood en caja">
+                        </picture>
+                        <div class="card-item__content"> 
+                            <p class="card-item__licence">HARRY POTTER</p>
+                            <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                            <p class="card-item__price">$ 1799,99.-</p>
+                            <p class="card-item__promo">3 CUOTAS SIN INTERES</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <div froggie-include-html="../snippets/footer_snippet.html"></div>
+
+    <script type="text/javascript" src="../../js/include_snippets.js"></script>
+    <script type="text/javascript" src="../../js/item_page.js"></script>
+
+</body>
+</html>

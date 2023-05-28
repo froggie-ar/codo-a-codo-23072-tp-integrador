@@ -1,0 +1,21 @@
+/*
+  
+Muchos de los estilos del menu del footer son compartidos
+  (navbar, etc) con los del header además de los que ya
+  están en el normalizador
+
+*/
+
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.footer__copy {
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-medium);
+    
+    /* este elemento es un parrafo asi con que centrar el texto alcanza */
+    text-align: center;
+}
