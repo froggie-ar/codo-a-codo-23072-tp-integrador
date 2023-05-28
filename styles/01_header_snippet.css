@@ -1,0 +1,43 @@
+
+/* ------------- nav-bar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar__logo {
+    max-width: 300px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    color: var(--light-font-solid);
+}
+
+/* 
+   se pone display: inline-block para incluir el padding en el flujo
+   estático de la pagina, ya que los links como son etiquetas en linea
+   no se agregan al flujo.
+
+   El transition lo agregamos para que el efecto del hover sea mas suave
+
+*/
+.navbar__link {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
+}
+

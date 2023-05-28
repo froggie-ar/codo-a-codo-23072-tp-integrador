@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* ---------------------- item area ----------------------*/
+
+.item_area {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.item__image {
+    flex: 1;
+    width: 80%;
+    margin: auto var(--spacing-20);
+}
+
+.item__info {
+    flex: 2;
+    margin: auto 0;
+    font-family: var(--base-font);
+}
+
+.item__up_title {
+    font-size: var(--font-small);
+    font-weight: 500;
+    margin-bottom: var(--spacing-12);
+}
+
+
+.item__title {
+
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    margin-bottom: var(--spacing-12);
+}
+
+.item__text{
+    font-size: var(--font-large);
+    font-weight: 400;
+    margin-bottom: var(--spacing-12);
+}
+
+.item__price {
+    font-size: var(--font-jumbo);
+    font-weight: 400;
+    margin-bottom: var(--spacing-12);
+}
+
+.add_to_cart_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: var(--spacing-36);
+}
+
+.form__counter_block {
+    display: flex;
+    align-items: flex-start;
+    margin-right: var(--spacing-20);
+}
+
+.form__value_button {
+    display: inline-block;
+    font-size: var(--font-medium);
+    background: #4F4F4F;
+    color: var(--light-font-solid);
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.4em 0;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form__value_button:hover {
+    cursor: pointer;
+}
+  
+.form__item_number {
+    font-family: inherit;
+    font-size: var(--font-medium);
+    border: 1px solid #C9C9C9;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    margin-left: var(--spacing-12);
+    margin-right: var(--spacing-12);
+}
+
+.form__go_cart_button {
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    padding-left: var(--spacing-20);
+    padding-right: var(--spacing-20);
+}
+
+
+.item__metodos_pago {
+    color: var(--secondary-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
+}
+
+.item__link {
+    text-decoration: underline;
+}
+
+
+/* ----------------------- related items ----------------------*/
+
+#related-items {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem;
+}
+
+#item-slider {
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(233, 230, 230);
+}
+ 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funkshop admin site">
+    <meta name="keywords" content="Items report">
+    <link rel="stylesheet" href="../../styles/items_report_page.css">
+    <link rel="stylesheet" href="../../styles/header_snippet.css" class="css">
+    <link rel="stylesheet" href="../../styles/footer_snippet.css" class="css">
+    <title>Funkshop Listado de Items</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div froggie-include-html="../snippets/header_snippet.html"></div>
+
+        <header>
+            <img src="../../svg/search_icon.svg" alt="busqueda">
+            <input type="search" id="report-search" name="report_search">
+        </header>
+
+        <main>
+
+            <section class="report-header">
+
+                <h1>LISTADO DE PRODUCTOS</h1>
+
+                <div id="add-row">
+                    <h3>AGREGAR</h3>
+                    <div id="add-row-btn">+</div>
+                </div>
+
+            </section>
+
+            <section id="report-body">
+
+                <table id="report-table">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código</th>
+                            <th>Nombre del Producto</th>
+                            <th>Categoría</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>STW001001</td>
+                            <td>Baby Yoda Blue Ball</td>
+                            <td>STAR WARS</td>
+                            <td><img src="../../svg/edit_pencil.svg" alt="editar"></td>
+                            <td><img src="../../svg/delete_trash.svg" alt="eliminar"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>STW001002</td>
+                            <td>Boba Fett Fighter</td>
+                            <td>STAR WARS</td>
+                            <td><img src="../../svg/edit_pencil.svg" alt="editar"></td>
+                            <td><img src="../../svg/delete_trash.svg" alt="eliminar"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>PKM001002</td>
+                            <td>Dragonite Hi!</td>
+                            <td>POKEMON</td>
+                            <td><img src="../../svg/edit_pencil.svg" alt="editar"></td>
+                            <td><img src="../../svg/delete_trash.svg" alt="eliminar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+
+        <div froggie-include-html="../snippets/footer_snippet.html"></div>
+    </div>
+
+    <script type="text/javascript" src="../../js/include_snippets.js"></script>
+    
+</body>
+</html>

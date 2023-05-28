@@ -1,0 +1,140 @@
+
+
+/* ------------- HERO - new arrivals section ------------- */
+
+.hero {
+    background-image: url(./../images/funkos-banner.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed; /* esto es para que el bg quede fijo cuando hacemos scroll :) */
+    padding: var(--spacing-128);
+    position: relative;
+}
+
+/* 
+   para desenfocar el fondo usamos un truco, entre el background y el contenido 
+   vamos a poner una capa, que es la que vamos a blurear.
+
+   Siempre que usamos before debemos darle un contenido, pero en este caso lo vamos
+   a dejar vacio, ahí nomas le aplicamos el background color rgba con transparencia
+   para que no tape el fondo.
+
+   Sin embargo, como el before tiene un posicionamiento estatico se pone debajo la imagen, 
+   para que se vea le ponemos position absolute y al padre relative. Tambien le tenemos que 
+   indicar que tome todo el espacio del contenedor y posicionarlo.
+
+   Luego que tenemos esta "capa" le aplicamos el filtro de blur y brightness!! tambien
+   debemos jugar con el z-index para darles un orden de apilamiento correcto a los elementos
+   (la capa de blur debe estar arriba del background y la seccion de textos arriba de la del
+   blur)
+
+*/
+
+.hero::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px) brightness(0.9);
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start; /* el align default es strech y no nos sirve */
+    position: relative;
+    z-index: 2;
+}
+
+.hero__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    color: var(--light-bg-solid);
+}
+
+.hero__text {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 400;
+    color: var(--light-bg-solid);
+}
+
+.hero__link {
+    display: inline-block;  /* esto es para que tome propiedades de tamaño y relleno ya que es un link */
+    font-family: var(--base-font);
+    font-weight: 500;
+    font-size: var(--font-medium);
+    background-color: var(--light-bg-solid);
+    padding: var(--spacing-12) var(--spacing-68);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out; /* la transicion para el cambio de color de hover */
+}
+
+.hero__link:hover {
+    background-color: var(--primary-900);
+    color: var(--light-bg-solid);
+}
+
+/* ------------- collection ------------- */
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: var(--spacing-16) 0;
+}
+
+/*
+  De todos los section seleccionamos el segundo
+  y a ese como estamos en flex, le invertimos el 
+  orden a la image
+*/
+
+.collection:nth-child(2) .collection__cover {
+    order: -1;
+}
+
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-28);
+    align-items: start;
+}
+
+.collection__title {
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-display);
+}
+
+.collection__text {
+    font-family: var(--alternative-font);
+    font-weight: 400;
+    font-size: var(--font-large);
+    border-bottom: 2px solid var(--primary-900);
+    padding-bottom: var(--spacing-20);
+}
+
+.collection__link {
+    display: inline-block;  /* recordar que para que a los links se le puedan cambiar las propiedades necesitan inline-block */
+    font-family: var(--base-font);
+    font-weight: 500;
+    font-size: var(--font-medium);
+    background-color: var(--dark-bg-solid);
+    color: var(--light-bg-solid);
+    padding: var(--spacing-16) var(--spacing-36);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.collection__link:hover {
+    background-color: var(--primary-900);
+    color: var(--light-bg-solid);
+}
+

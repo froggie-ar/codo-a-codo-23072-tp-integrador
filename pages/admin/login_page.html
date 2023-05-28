@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funkshop admin site">
+    <meta name="keywords" content="login, password management">
+    <link rel="stylesheet" href="./../../styles/00_normalizer.css" class="css">
+    <link rel="stylesheet" href="./../../styles/01_header_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/02_footer_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/03_admin_common.css" class="css"> 
+    <link rel="stylesheet" href="./../../styles/login_page.css">
+    <title>Funkshow Login</title>
+</head>
+<body>
+    
+    <div froggie-include-html="../snippets/header_snippet.html"></div>
+
+    <section class="login container">
+        
+        <h1 class="admin__title">INGRESAR A MI CUENTA</h1>
+
+        <form class="login__form" action="">
+            
+            <label class="admin__prompt email_prompt" for="login-email">Email:</label>
+            <input class="admin__input  email_input"  type="email" name="login_email" id="login-email" placeholder="johndoe@domain.com">
+
+            <label class="admin__prompt password_prompt" for="login-password">Contraseña:</label>
+            <input class="admin__input  password_input"  type="password" name="login_password" id="login-password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+
+            <input class="register_button" type="submit" value="Ingresar">
+            
+            <div class="remember_checkbox">
+                <input type="checkbox" name="login_recordar_passwd" id="login-recordar-passwd">
+                <label for="login-remember-passwd">Recordarme</label>
+            </div>
+
+            <a class="forgot_link" href="">Olvidé mi contraseña</a>
+            
+        </form>
+    </section>
+
+    <div froggie-include-html="../snippets/footer_snippet.html"></div>
+
+    <script type="text/javascript" src="../../js/include_snippets.js"></script>
+
+</body>
+</html>

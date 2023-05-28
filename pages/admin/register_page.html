@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funkshop admin site">
+    <meta name="keywords" content="register, account">
+    <link rel="stylesheet" href="./../../styles/00_normalizer.css" class="css">
+    <link rel="stylesheet" href="./../../styles/01_header_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/02_footer_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/03_admin_common.css" class="css"> 
+    <link rel="stylesheet" href="./../../styles/register_page.css">
+    <title>Funkshow Registración</title>
+
+</head>
+<body>
+    
+    <div froggie-include-html="../snippets/header_snippet.html"></div>
+
+    <section id="register container">
+
+        <h1 class="admin__title">CREA TU CUENTA</h1>
+        <h3 class="admin__under_title">Completa el formulario para ser parte del mundo de los Funkos</h3>
+        
+        <form class="register__form" action="">
+            
+            <label class="admin__prompt name_prompt" for="register-name" id="register-name-prompt">Nombre:</label>
+            <input class="admin__input  name_input" type="text" name="register_name" id="register-name" placeholder="John">
+
+            <label class="admin__prompt surname_prompt" for="register-surname" id="register-surname-prompt">Apellido:</label>
+            <input class="admin__input  surname_input"  type="text" name="register_surname" id="register-surname" placeholder="Doe">
+            
+            <label class="admin__prompt email_prompt" id="register-email-prompt" for="register-email">Email:</label>
+            <input class="admin__input  email_input"  type="email" name="register_email" id="register-email">
+            
+            <label class="admin__prompt password_prompt" id="register-password-promt" for="register-password">Contraseña:</label>
+            <input class="admin__input  password_input"  type="password" name="register_password" id="register-password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            
+            <label class="admin__prompt password_2_prompt"  id="register-password-2-prompt" for="register-password-2">Repita Contraseña:</label>
+            <input class="admin__input  password_2_input"  type="password" name="register_password_2" id="register-password-2" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            
+            <input  class="register__button" type="submit" value="Registrar">
+
+            <div class="register__terms">
+                <input type="checkbox" name="register_tercon" id="register-tercon">
+                <label for="register-tercon">Acepto <a class="register__link" href="">Términos y Condiciones</a> </label>
+            </div>
+            
+        </form>
+
+    </section>
+    
+    <div froggie-include-html="../snippets/footer_snippet.html"></div>
+    
+    <script type="text/javascript" src="../../js/include_snippets.js"></script>
+
+</body>
+</html>

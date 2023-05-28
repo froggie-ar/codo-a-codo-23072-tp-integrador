@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@400;500;700&display=swap');
+
+.register__form {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "ga_prompt_1 ga_prompt_1 ga_input_1  ga_input_1"
+        "ga_prompt_2 ga_prompt_2 ga_input_2  ga_input_2"
+        "ga_prompt_3 ga_prompt_3 ga_input_3  ga_input_3"
+        "ga_prompt_4 ga_prompt_4 ga_input_4  ga_input_4"
+        "ga_prompt_5 ga_prompt_5 ga_input_5  ga_input_5"
+        "ga_button   ga_checkbox ga_checkbox ga_checkbox";
+    justify-items: start;
+    justify-content: center;
+    align-items: baseline;
+    row-gap: var(--spacing-20);
+    margin-bottom: var(--spacing-36);
+}
+
+.name_prompt {
+    grid-area: ga_prompt_1;
+}
+
+.name_input {
+    grid-area: ga_input_1;
+    justify-self: stretch;
+}
+
+.surname_prompt {
+    grid-area: ga_prompt_2;
+}
+
+.surname_input {
+    grid-area: ga_input_2;
+    justify-self: stretch;
+}
+
+.email_prompt {
+    grid-area: ga_prompt_3;
+}
+
+.email_input {
+    grid-area: ga_input_3;
+    justify-self: stretch;
+}
+
+.password_prompt {
+    grid-area: ga_prompt_4;
+}
+
+.password_input {
+    grid-area: ga_input_4;
+    justify-self: stretch;
+}
+
+.password_2_prompt {
+    grid-area: ga_prompt_5;
+}
+
+.password_2_input {
+    grid-area: ga_input_5;
+    justify-self: stretch;
+}
+
+.register__button {
+    grid-area: ga_button;
+    justify-self: start;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    border: none;
+    font-family: var(--base-font);
+    font-weight: 400;
+    font-size: var(--font-xsmall);
+    padding: var(--spacing-12) var(--spacing-28);
+    transition: all 0.3s ease-in-out;
+}
+
+.register__button:hover {
+    background-color: var(--dark-solid);
+}
+
+.register__terms {
+    grid-area: ga_checkbox;
+    justify-self: end;
+    margin-left: var(--spacing-36);
+    font-size: var(--font-medium);
+    font-weight: 400;
+}
+
+.register__link {
+    color: var(--secondary-solid);
+}

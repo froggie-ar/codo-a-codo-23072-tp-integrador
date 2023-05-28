@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Funkshop admin site">
+    <meta name="keywords" content="new item, creation">
+    <link rel="stylesheet" href="./../../styles/00_normalizer.css" class="css">
+    <link rel="stylesheet" href="./../../styles/01_header_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/02_footer_snippet.css" class="css">
+    <link rel="stylesheet" href="./../../styles/03_admin_common.css" class="css"> 
+    <link rel="stylesheet" href="./../../styles/new_edit_item_page.css" class="css">
+    <title>Funkshow Alta de Items</title>
+
+</head>
+<body>
+        
+    <div froggie-include-html="../snippets/header_snippet.html"></div>
+
+    <section class="new_edit_item container">
+
+        <h1 class="admin__title new_edit_item__title">CREAR NUEVO ITEM</h1>
+        
+        <form class="new_edit_item__form" action="">
+            
+            <div class="row_one">
+
+                <label class="new_edit_item__prompt new_edit_item__right_gap" for="nwit-category" id="nwit-cateogy-prompt">Categoría:</label>
+                <select class="new_edit_item__select new_edit_item__right_gap" name="nwit_category" id="nwit-name">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="1">Figuras</option>
+                </select>
+
+                <label class="new_edit_item__prompt new_edit_item__right_gap" for="nwit-licence" id="nwit-licence-prompt">Licencia:</label>
+                <select class="new_edit_item__select new_edit_item__right_gap" name="nwit_licence" id="nwit-licence">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="1">STAR WARS</option>
+                    <option value="2">HARRY POTTER</option>
+                    <option value="1">POKEMON</option>
+                </select>
+
+            </div>
+            
+            <div class="row_two">
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-product-name-prompt" for="nwit-product-name">Nombre del Producto:</label>
+                <input class="new_edit_item__input  admin__input" type="text" name="nwit_product_name" id="nwit-product-name">
+            </div>
+
+            <div class="row_three">
+                <textarea class="new_edit_item__area" name="nwit_product_desc" id="nwit-product-desc" rows="8" cols="70" placeholder="Descripción del producto"></textarea>
+            </div>
+
+            <div class="row_four">
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-sku-prompt" for="nwit-sku">SKU:</label>
+                <input class="new_edit_item__input admin__input new_edit_item__right_gap" type="text" name="nwit_sku" id="nwit-sku" placeholder="SSK11AB001">
+                
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-price-prompt" for="nwit-price">Precio:</label>
+                <input class="new_edit_item__input  admin__input new_edit_item__right_gap" type="number" min="0" name="nwit_price" id="nwit-price" placeholder="$0,000.00">
+
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-stock-prompt" for="nwit-stock">Stock:</label>
+                <input class="new_edit_item__input  new_edit_item__stock admin__input" type="number" min="0" name="nwit_stock" id="nwit-stock" placeholder="0">
+            </div>
+
+            <div class="row_five">
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-discount-prompt" for="nwit-discount">Descuento:</label>
+                <input class="new_edit_item__input  new_edit_item__right_gap admin__input" type="number" name="nwit_discount" id="nwit-discount" min="0" max="100" placeholder="0%">
+
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-dues-prompt" for="nwit-dues">Cuotas:</label>
+                <select class="new_edit_item__select new_edit_item__right_gap" name="nwit_dues" id="nwit-dues">
+                    <option value="1" selected>1 Pago</option>
+                    <option value="2">3 Cuotas sin interés</option>
+                    <option value="3">6 Cuotas sin interés</option>
+                </select>
+            </div>
+
+            <div class="row_six">
+                <label class="new_edit_item__prompt new_edit_item__right_gap" id="nwit-product-image-prompt" for="nwit-product-image">Imágenes:</label>
+                <input type="file" name="nwit_product_image" id="nwit-product-image" accept="image/png, image/jpeg" multiple>
+            </div>
+
+            <div class="row_seven">
+                <input class="new_edit_item__button new_edit_item__right_gap" type="submit" value="Agregar Producto">
+                <input class="new_edit_item__button new_edit_item__right_gap" type="reset" value="Limpiar">
+            </div>
+
+        </form>
+
+    </section>
+    
+    <div froggie-include-html="../snippets/footer_snippet.html"></div>
+    
+    <script type="text/javascript" src="../../js/include_snippets.js"></script>
+
+</body>
+</html>
